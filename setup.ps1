@@ -6,3 +6,5 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\WI
 Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
 
 Get-Service -Name *ssh*
+
+netstat -nao | find /i '":22"'
